@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+frontend/dist/
+.env
+.DS_Store
+# personal resume files dropped in for testing
+*.pdf
+*.docx

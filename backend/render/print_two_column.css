@@ -1,0 +1,34 @@
+/* Two-column layout overlay. DOM source order stays main-then-sidebar for ATS. */
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--col-gap, 14pt);
+}
+
+.main-col {
+  flex: 1 1 auto;
+  min-width: 0;
+  order: 1;
+}
+
+.sidebar {
+  flex: 0 0 var(--sidebar-width, 32%);
+  width: var(--sidebar-width, 32%);
+  order: 2;
+  font-size: 0.95em;
+}
+
+.sidebar h2 {
+  margin-top: var(--h2-margin-top, 9pt);
+}
+
+.sidebar .skill-line {
+  font-size: 0.95em;
+  margin-bottom: 2pt;
+}
+
+header {
+  margin-bottom: 8pt;
+}

@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pdfplumber
+python-docx
+spacy
+yake
+rapidfuzz
+weasyprint
+google-genai
+httpx
+pydantic
+python-multipart
+
+# dev / test
+pytest

@@ -1,0 +1,117 @@
+/* Print stylesheet for the WeasyPrint resume template.
+   ATS-friendly: single column, standard fonts, no headers/footers.
+   Density controlled via CSS variables injected by renderer.py. */
+
+@page {
+  size: Letter;
+  margin: var(--page-margin-y, 0.5in) var(--page-margin-x, 0.6in);
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: var(--body-size, 10.25pt);
+  line-height: var(--body-leading, 1.32);
+  color: #111;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--h1-size, 18pt);
+  letter-spacing: 0.4pt;
+  margin: 0;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+
+.headline {
+  font-size: 10.5pt;
+  margin: 2pt 0 0;
+  color: #222;
+  font-weight: 500;
+}
+
+.contact {
+  font-size: 9pt;
+  margin: 1.5pt 0 0;
+  color: #222;
+}
+
+header {
+  margin-bottom: 6pt;
+}
+
+h2 {
+  font-size: var(--h2-size, 10pt);
+  text-transform: uppercase;
+  letter-spacing: 1.1pt;
+  border-bottom: 0.8pt solid #333;
+  padding-bottom: 1.5pt;
+  margin: var(--h2-margin-top, 9pt) 0 4pt;
+  color: #111;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 2.5pt;
+}
+
+.summary {
+  text-align: left;
+}
+
+.skill-line {
+  margin: 0 0 1.5pt;
+}
+
+.entry {
+  margin-bottom: var(--entry-margin, 6pt);
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8pt;
+  margin-bottom: 1pt;
+}
+
+.entry-left {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.entry-dates {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 9.5pt;
+  color: #222;
+  text-align: right;
+}
+
+.entry-location {
+  margin: 0 0 1.5pt;
+}
+
+.entry-header-raw {
+  margin-bottom: 1pt;
+}
+
+.muted {
+  font-size: 9pt;
+  color: #444;
+}
+
+.edu-meta {
+  font-size: 9.5pt;
+  color: #333;
+  margin: 0 0 1.5pt;
+}
+
+ul {
+  margin: 1pt 0 3pt;
+  padding-left: 13pt;
+}
+
+li {
+  margin-bottom: var(--li-margin, 1.5pt);
+}
